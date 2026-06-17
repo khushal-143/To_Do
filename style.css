@@ -97,6 +97,7 @@ ul li span{
 ul li span:hover{
     background: #edeef0;
     
+<<<<<<< HEAD
 }
 .edit-btn{
     position: absolute;
@@ -114,4 +115,6 @@ ul li span:hover{
 
 .edit-btn:hover{
     background: #edeef0;
+=======
+>>>>>>> fa282f2fb0226c7c21f713d335894b35c7ee1cb6
 }
