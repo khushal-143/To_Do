@@ -4,23 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To_Do List</title>
+    <title>Todo App Pro</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="todo-app">
-            <h2>To-Do List <img src="images/icon.png" alt="Not Found"></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text">
-                <button id="add-btn" onclick="addTask()">Add</button>
+
+    <button id="themeToggle" title="Toggle Theme">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <div class="app">
+
+        <header>
+            <h1><i class="fa-solid fa-list-check"></i> Todo App Pro</h1>
+            <p>Stay organized. Stay productive.</p>
+        </header>
+
+        <section class="stats">
+
+            <div class="card">
+                <h3>Total</h3>
+                <span id="totalTasks">0</span>
             </div>
-            <ul id="list-container">
-            </ul>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <span id="completedTasks">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <span id="pendingTasks">0</span>
+            </div>
+
+        </section>
+
+        <section class="progressSection">
+
+            <div class="progressInfo">
+                <span>Progress</span>
+                <span id="progressText">0%</span>
+            </div>
+
+            <div class="progressBar">
+                <div id="progressFill"></div>
+            </div>
+
+        </section>
+
+        <section class="controls">
+
+            <div class="inputGroup">
+
+                <input type="text" id="taskInput" placeholder="Add a new task...">
+
+                <button id="addTaskBtn">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+            </div>
+
+            <div class="searchFilter">
+
+                <input type="text" id="searchInput" placeholder="Search tasks...">
+
+                <select id="filterSelect">
+                    <option value="all">All</option>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                </select>
+
+            </div>
+
+        </section>
+
+        <ul id="taskList"></ul>
+
+        <div id="emptyState">
+            <i class="fa-regular fa-face-smile"></i>
+            <h2>No Tasks Yet</h2>
+            <p>Add your first task to get started.</p>
         </div>
+
     </div>
+
+    <div id="toast"></div>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
